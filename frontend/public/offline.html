@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offline</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .macos-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .macos-window {
+      width: 400px;
+      border-radius: 12px;
+      background: #f0f0f0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .macos-window-header {
+      background: #ddd;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .macos-window-header-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .macos-button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .macos-button.red { background: #ff5f56; }
+    .macos-button.yellow { background: #ffbd2e; }
+    .macos-button.green { background: #27c93f; }
+
+    .status-indicator.offline {
+      color: red;
+      font-weight: bold;
+    }
+
+    .macos-window-content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    .status-section {
+      margin-top: 20px;
+    }
+
+    .status-indicator {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .online { color: green; }
+    .offline { color: red; }
+  </style>
+</head>
+<body>
+  <div class="macos-wrapper">
+    <div class="macos-window">
+      <div class="macos-window-header">
+        <div class="macos-window-header-buttons">
+          <div class="macos-button red"></div>
+          <div class="macos-button yellow"></div>
+          <div class="macos-button green"></div>
+        </div>
+        <div class="status-indicator offline">Offline</div>
+      </div>
+
+      <div class="macos-window-content">
+        <h1>Oops! You're Offline.</h1>
+        <p>Failed to connect to the server.</p>
+        <div class="status-section">
+          <span class="status-indicator offline">Internet: Disconnected</span>
+          <span class="status-indicator offline">WebSocket: Disconnected</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('online', () => {
+      setTimeout(() => {
+        window.location.href = '/';
+      }, 1000);
+    });
+  </script>
+  
+</body>
+</html>

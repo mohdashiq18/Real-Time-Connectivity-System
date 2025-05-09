@@ -1,0 +1,161 @@
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  transition: background-color 0.3s;
+}
+
+.app.online {
+  background-color: #2ecc702e;
+}
+
+.app.offline {
+  background-color: #e74d3c23;
+}
+
+
+.macos-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+
+.macos-window {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); 
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.macos-window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.macos-window-header-buttons {
+  display: flex;
+}
+
+.macos-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background-color: #d1d1d6;
+  cursor: pointer;
+}
+
+.macos-button.red {
+  background-color: #ff5f56;
+}
+
+.macos-button.yellow {
+  background-color: #ffbd2e;
+}
+
+.macos-button.green {
+  background-color: #27c93f;
+}
+
+
+.status-indicator {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-indicator.online {
+  background-color: #27c93f; 
+}
+
+.status-indicator.offline {
+  background-color: #ff5f56; 
+}
+
+
+.macos-window-content {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.macos-window-content h1 {
+  font-size: 28px;
+  color: #333;
+  font-weight: 600;
+}
+
+.macos-window-content p {
+  font-size: 18px;
+  margin-top: 12px;
+  color: #777;
+}
+
+.macos-button-action {
+  background-color: #007aff;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.macos-button-action:hover {
+  background-color: #0051a8;
+}
+
+.macos-button-action:focus {
+  outline: none;
+}
+
+.status-section {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.status-indicator {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.status-indicator.online {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-indicator.offline {
+  background-color: #f8d7da;
+  color: #721c24;
+}
